@@ -2,7 +2,7 @@
 
 Fügt ein Live-Suchfeld in die **Produktkategorien-Metabox** des WooCommerce-Produkt-Editors ein. Statt bei vielen Kategorien endlos zu scrollen, tippst du einfach los und die Liste filtert sich in Echtzeit.
 
-![Version](https://img.shields.io/badge/version-1.1.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.1-blue)
 ![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.0%2B-blue)
 

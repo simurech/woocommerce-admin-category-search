@@ -70,15 +70,22 @@ jQuery(function ($) {
             var matches = 0;
             $a.find('.categorychecklist li').each(function () {
                 var $li = $(this);
-                var $span = $li.children('label').first().find('.wacs-cat-label');
-                var raw = $span.length ? ($span.attr('data-wacs-text') || $span.text()) : $li.children('label').first().text();
-                var hit = raw.toLowerCase().indexOf(q) >= 0;
-                $li.toggle(hit);
-                if (hit) {
+                var $label = $li.children('label').first();
+                var $span = $label.find('.wacs-cat-label');
+                var ownRaw = $span.length ? ($span.attr('data-wacs-text') || $span.text()) : $label.text();
+                // Sichtbarkeit anhand des gesamten Teilbaums (inkl. Text der
+                // Unterkategorien), damit ein Treffer in einer Unterkategorie
+                // die Oberkategorie sichtbar lässt, auch wenn deren Name selbst
+                // nicht passt.
+                var visible = $li.text().toLowerCase().indexOf(q) >= 0;
+                $li.toggle(visible);
+                if (visible) {
                     matches++;
                 }
+                // Hervorhebung nur auf dem eigenen Kategorienamen.
                 if ($span.length) {
-                    setHighlight($span, raw, hit ? q : '');
+                    var ownHit = ownRaw.toLowerCase().indexOf(q) >= 0;
+                    setHighlight($span, ownRaw, ownHit ? q : '');
                 }
             });
             toggleNoResults($d, matches === 0);
