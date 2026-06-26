@@ -48,7 +48,8 @@ class WC_Admin_Category_Search {
     private function inline_css() {
         return '.wacs-cat-search{width:100%;box-sizing:border-box;margin:6px 0 4px;padding:4px 6px;border:1px solid #ddd;border-radius:3px;font-size:13px;}'
             . '.wacs-cat-noresults{margin:6px 2px;color:#757575;font-style:italic;}'
-            . '.wacs-cat-search-hl{background:#fff8c5;border-radius:2px;}';
+            . '.wacs-cat-search-hl{background:#fff8c5;border-radius:2px;}'
+            . '.wacs-cat-active{background:#f0f6fc;box-shadow:inset 2px 0 0 #2271b1;border-radius:2px;}';
     }
 }
 

@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WooCommerce Admin Category Search
  * Description: Fügt ein Live-Suchfeld in die Produktkategorien-Metabox im WooCommerce-Produkt-Editor ein.
- * Version: 1.1.1
+ * Version: 1.2.0
  * Author: Simon Urech
  * Author URI: https://urech.dev
  * License: Private
@@ -21,7 +21,7 @@ if (!defined('ABSPATH')) {
 }
 
 $wacs_data = get_file_data(__FILE__, array('Version' => 'Version'));
-define('WACS_VERSION', $wacs_data['Version'] ?: '1.1.1');
+define('WACS_VERSION', $wacs_data['Version'] ?: '1.2.0');
 define('WACS_PLUGIN_FILE', __FILE__);
 define('WACS_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WACS_PLUGIN_URL', plugin_dir_url(__FILE__));

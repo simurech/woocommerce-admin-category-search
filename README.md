@@ -2,7 +2,7 @@
 
 Fügt ein Live-Suchfeld in die **Produktkategorien-Metabox** des WooCommerce-Produkt-Editors ein. Statt bei vielen Kategorien endlos zu scrollen, tippst du einfach los und die Liste filtert sich in Echtzeit.
 
-![Version](https://img.shields.io/badge/version-1.1.1-blue)
+![Version](https://img.shields.io/badge/version-1.2.0-blue)
 ![WordPress](https://img.shields.io/badge/WordPress-6.0%2B-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.0%2B-blue)
 
@@ -10,6 +10,8 @@ Fügt ein Live-Suchfeld in die **Produktkategorien-Metabox** des WooCommerce-Pro
 
 - 🔍 **Live-Suche** direkt in der Kategorien-Metabox – filtert die Checkbox-Liste während des Tippens
 - ✨ **Trefferhervorhebung** des Suchbegriffs in den Kategorienamen
+- 🔤 **Umlaut-/Akzent-tolerant** – „musli" findet „Müsli", „creme" findet „Crème"
+- ⬆️⬇️ **Tastatur-Navigation** – mit `↑`/`↓` durch die Treffer, `Enter` setzt das Häkchen
 - 🚫 **„Keine Treffer"-Hinweis**, wenn nichts passt
 - ⌨️ **`Esc`** leert das Suchfeld, **Debounce** hält die Liste auch bei vielen Kategorien flüssig
 - ♿ Barrierefrei dank `aria-label` am Suchfeld
@@ -42,6 +44,8 @@ Alternativ den Ordner `woocommerce-admin-category-search` nach `wp-content/plugi
 Nach der Aktivierung erscheint im Produkt-Editor (**Produkte → Neu / Bearbeiten**) oberhalb der Produktkategorien-Liste ein Suchfeld mit dem Platzhalter „Kategorie suchen…“.
 
 - Beim Tippen werden nur passende Kategorien im Tab **„Alle”** angezeigt, der Treffer wird hervorgehoben.
+- Die Suche ignoriert Gross-/Kleinschreibung sowie Umlaute und Akzente.
+- Mit **`↑`/`↓`** navigierst du durch die Treffer, **`Enter`** setzt bzw. entfernt das Häkchen der aktiven Kategorie.
 - Mit **`Esc`** oder durch Leeren des Felds kehrt die Liste in den Ausgangszustand mit aktiven Tabs zurück.
 
 > **Hinweis:** Das Plugin erweitert die klassische Kategorien-Metabox (`.categorydiv`). Der neue, React-basierte WooCommerce-Produkt-Editor verwendet diese Metabox nicht – dort steht die Suche derzeit nicht zur Verfügung.
